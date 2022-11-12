@@ -41,7 +41,7 @@ Tambien asi solo lee bien el output
 gobuster vhost -w /opt/SecLists/Discovery/DNS/bitquark-subdomains-top100000.txt -t 50 -u shoppy.htb 
 ```
 
-
+Encontramos un logging
 
 
 
