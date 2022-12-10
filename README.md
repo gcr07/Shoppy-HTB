@@ -99,6 +99,15 @@ password: Sh0ppyBest@pp!
 ```
 
 
+Se necesita enumerar los usuarios nos damos cuenta que esta un usuario deploy 
+
+```
+sudo -l
+
+```
+
+Ahi nos damos cuenta que comandos se pueden correr
+
 
 
 
