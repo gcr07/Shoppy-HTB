@@ -85,6 +85,18 @@ remembermethisway
 
 ```
 
+## Intrucion
+
+Entramos con el usuario josh al subdominio que encontramos
+
+> http://mattermost.shoppy.htb/shoppy/channels/deploy-machine
+
+Ahi nos damos cuenta que existe un user y pass iniciamos sesion ssh.
+
+```
+username: jaeger
+password: Sh0ppyBest@pp!
+```
 
 
 
