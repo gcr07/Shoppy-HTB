@@ -106,7 +106,16 @@ sudo -l
 
 ```
 
-Ahi nos damos cuenta que comandos se pueden correr
+Ahi nos damos cuenta que comandos se pueden correr podemos correr una password manager como el usuario deploy sin password y sin cambiar de usuaro
+hacemos cat en el archivo y nos damos cuenta que el usuario es Sample
+
+```
+sudo -u deploy /home/deploy/password-manager
+Sample
+username: deploy
+password: Deploying@pp!
+
+```
 
 
 
