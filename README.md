@@ -117,8 +117,16 @@ password: Deploying@pp!
 
 ```
 
+## .. / docker
 
+This requires the user to be privileged enough to run docker, i.e. being in the docker group or being root.
 
+Any other Docker Linux image should work, e.g., debian.
+
+```
+docker run -v /:/mnt --rm -it alpine chroot /mnt sh
+```
+Con lo anterior tenemos al usuario root y completamos la maquina.
 
 
 
